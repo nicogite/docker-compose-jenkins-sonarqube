@@ -12,6 +12,10 @@ services:
     ports:
       - '8080:8080'
       - '50000:50000'
+    #group_add:
+    #  - 998 # Docker group
+    privileged: true
+    user: root
 
   sonarqube:
     image: sonarqube:7.6-community 
